@@ -96,6 +96,7 @@ pub enum TargetType {
 }
 
 impl TargetType {
+    #[must_use]
     pub fn to_arg(t: TargetType) -> &'static str {
         match t {
             TargetType::Bot => "bot",
