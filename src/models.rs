@@ -75,3 +75,31 @@ pub enum LongDescriptionType {
     #[default]
     MarkdownServerSide = 1,
 }
+
+#[derive(
+    Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Default, Debug, EnumIter
+)]
+#[repr(i32)]
+pub enum WebhookType {
+    #[default]
+    Vote = 0,
+    DiscordIntegration = 1,
+    DeprecatedFatesClient = 2,
+}
+
+#[derive(Eq, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Default, Debug, EnumIter)]
+#[repr(i32)]
+pub enum TargetType {
+    #[default]
+    Bot = 0,
+    Server = 1,
+}
+
+impl TargetType {
+    pub fn to_arg(t: TargetType) -> &'static str {
+        match t {
+            TargetType::Bot => "bot",
+            TargetType::Server => "server",
+        }
+    }
+}
