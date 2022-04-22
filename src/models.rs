@@ -60,7 +60,9 @@ pub enum Flags {
 )]
 #[repr(i32)]
 pub enum UserFlags {
-    VotesPrivate = 0,
+    #[default]
+    Unknown = 0,
+    VotesPrivate = 1, // The user wishes to make their votes private
 }
 
 
