@@ -56,6 +56,15 @@ pub enum Flags {
 }
 
 #[derive(
+    Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Debug, Default, EnumIter
+)]
+#[repr(i32)]
+pub enum UserFlags {
+    VotesPrivate = 0,
+}
+
+
+#[derive(
     Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Default, Debug, EnumIter
 )]
 #[repr(i32)]
