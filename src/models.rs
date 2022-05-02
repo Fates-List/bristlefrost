@@ -100,7 +100,7 @@ pub enum WebhookType {
     DeprecatedFatesClient = 2,
 }
 
-#[derive(Eq, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Default, Debug, EnumIter)]
+#[derive(Hash, Eq, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Default, Debug, EnumIter)]
 #[repr(i32)]
 pub enum TargetType {
     #[default]
