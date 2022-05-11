@@ -46,14 +46,6 @@ pub enum State {
     Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Debug, Default, EnumIter
 )]
 #[repr(i32)]
-pub enum ServerFlags {
-    WhitelistOnly = 0,
-}
-
-#[derive(
-    Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Debug, Default, EnumIter
-)]
-#[repr(i32)]
 pub enum Flags {
     #[default]
     Unlocked = 0,
@@ -62,6 +54,7 @@ pub enum Flags {
     StatsLocked = 3,
     VoteLocked = 4,
     System = 5,
+    WhitelistOnly = 6
 }
 
 #[derive(
