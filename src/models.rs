@@ -41,6 +41,15 @@ pub enum State {
     PrivateStaffOnly = 9,
 }
 
+
+#[derive(
+    Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Debug, Default, EnumIter
+)]
+#[repr(i32)]
+pub enum ServerFlags {
+    WhitelistOnly = 0,
+}
+
 #[derive(
     Eq, TryFromPrimitive, Serialize_repr, Deserialize_repr, PartialEq, Clone, Copy, Debug, Default, EnumIter
 )]
