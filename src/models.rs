@@ -54,7 +54,8 @@ pub enum Flags {
     StatsLocked = 3,
     VoteLocked = 4,
     System = 5,
-    WhitelistOnly = 6
+    WhitelistOnly = 6,
+    KeepBannerDecor = 7,
 }
 
 #[derive(
