@@ -56,6 +56,7 @@ pub enum Flags {
     System = 5,
     WhitelistOnly = 6,
     KeepBannerDecor = 7,
+    NSFW = 8,
 }
 
 #[derive(
