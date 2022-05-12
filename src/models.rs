@@ -57,6 +57,7 @@ pub enum Flags {
     WhitelistOnly = 6,
     KeepBannerDecor = 7,
     NSFW = 8,
+    LoginRequired = 9,
 }
 
 #[derive(
