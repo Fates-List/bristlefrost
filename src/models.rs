@@ -13,6 +13,14 @@ pub struct User {
     pub status: Status,
 }
 
+#[derive(Serialize, Deserialize, Clone, Default)]
+pub struct StaffRole {
+    pub id: String,
+    pub staff_id: String,
+    pub perm: f32,
+    pub fname: String
+}
+
 #[derive(Deserialize, Serialize, Clone, PartialEq, Default, Debug, EnumIter)]
 pub enum Status {
     #[default]
