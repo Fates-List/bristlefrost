@@ -79,6 +79,7 @@ pub enum UserFlags {
     Staff = 2, // The user is a public staff member
     AvidVoter = 3, // This user has voted on our site multiple times :)
     Premium = 4, // The user is a premium member
+    Failure = 5, // The user is in Failure Management 
 }
 
 
